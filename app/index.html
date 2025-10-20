@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arduino Sensor Readings</h1>
+    <script>
+        
+        const ws = new WebSocket("ws://127.0.0.1:8000/ws/sensor");
+
+        ws.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        console.log("New reading:", data.temperature);
+        };
+
+    </script>
+</body>
+</html>
