@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frontend Dashboard</title>
+</head>
+<body>
+  <h2>Live Sensor Dashboard</h2>
+  <p>Status: <span id="status">Connecting...</span></p>
+  <pre id="output">Waiting for data...</pre>
+
+  <script>
+    const socket = new WebSocket("ws://127.0.0.1:8000/ws/sensor");
+    const status = document.getElementById("status");
+    const output = document.getElementById("output");
+
+    socket.onopen = () => {
+      status.textContent = "Connected ✅";
+      console.log("Connected to /ws/sensor");
+    };
+
+    socket.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      output.textContent = JSON.stringify(data, null, 2);
+      console.log("Received:", data);
+    };
+
+    socket.onclose = () => {
+      status.textContent = "Disconnected ❌";
+    };
+  </script>
+</body>
+</html>

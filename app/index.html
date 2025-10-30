@@ -9,7 +9,7 @@
     <h1>Arduino Sensor Readings</h1>
     <script>
         
-        const ws = new WebSocket("ws://127.0.0.1:8000/ws/sensor");
+        const ws = new WebSocket("wss://bipel2bpd2pgq3ojogco5nujky0icbnh.lambda-url.eu-north-1.on.aws/ws/sensor");
 
         ws.onmessage = (event) => {
         const data = JSON.parse(event.data);

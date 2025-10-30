@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Device Simulator</title>
+</head>
+<body>
+  <h2>Device Simulator</h2>
+  <p>Status: <span id="status">Connecting...</span></p>
+
+  <script>
+    const socket = new WebSocket("ws://127.0.0.1:8000/ws/device");
+    const status = document.getElementById("status");
+
+    socket.onopen = () => {
+      status.textContent = "Connected ✅";
+      console.log("Connected to /ws/device");
+
+      // Send random data every 3 seconds
+      setInterval(() => {
+        const data = {
+          temperature: (20 + Math.random() * 10).toFixed(2),
+          humidity: (40 + Math.random() * 20).toFixed(2),
+          timestamp: new Date().toISOString(),
+        };
+        socket.send(JSON.stringify(data));
+        console.log("Sent:", data);
+      }, 3000);
+    };
+
+    socket.onclose = () => {
+      status.textContent = "Disconnected ❌";
+    };
+  </script>
+</body>
+</html>
