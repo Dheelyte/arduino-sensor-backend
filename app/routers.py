@@ -22,13 +22,50 @@ latest_reading = {
     "timestamp": None
 }
 
-@router.get("/frontend", response_class=HTMLResponse)
-def get_frontend():
-    return Path("tests/frontend.html").read_text()
 
-@router.get("/device", response_class=HTMLResponse)
-def get_device():
-    return Path("tests/device.html").read_text()
+@router.post("/optimize", response_model=OptimizationResponse)
+async def optimize_a_drying_process(request: OptimizationRequest):
+    try:
+        optimization = analyse_optimization(request, latest_reading)
+        return OptimizationResponse(
+            recommendations=optimization.recommendations,
+            estimated_moisture_content=optimization.estimated_moisture_content,
+            drying_time_hours=optimization.drying_time_hours,
+            drying_time_elapsed=optimization.drying_time_elapsed
+        )
+    except Exception as e:
+        print(e)
+        raise HTTPException(status_code=500, detail="Optimization error: Make sure the sensors are properly connected")
+
+
+
+@router.get("/sensor")
+async def get_readings_from_backend():
+    """
+    {
+        "temperature": "string",
+        "humidity": "string",
+        "vibration": "string",
+        "timestamp": 0.0
+    }
+
+    Use websockets for pulling real-time sensor readings instead of this HTTP GET endpoint:
+
+    ws://domain-name/ws/sensor
+    """
+    return latest_reading
+
+
+@router.post("/sensor")
+async def send_readings_to_backend(data: SensorData):
+    global latest_reading
+    latest_reading = {
+        "temperature": data.temperature,
+        "humidity": data.humidity,
+        "vibration": data.vibration,
+        "timestamp": data.timestamp
+    }
+    return latest_reading
 
 
 @router.websocket("/ws/sensor")
@@ -61,47 +98,16 @@ async def device_socket(websocket: WebSocket):
         print("Device disconnected")
 
     
-@router.get("/optimize", response_model=OptimizationResponse)
-async def optimize(request: OptimizationRequest):
-    try:
-        optimization = analyse_optimization(request, latest_reading)
-        return OptimizationResponse(
-            recommendations=optimization.recommendations,
-            estimated_moisture_content=optimization.estimated_moisture_content,
-            optimal_drying_time_range=optimization.optimal_drying_time_range
-        )
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Optimization error: Make sure the sensors are properly connected")
 
 
 
-# @router.get("/sensor")
-# async def get_data():
-#     """
-#     {
-#         "temperature": "string",
-#         "humidity": "string",
-#         "vibration": "string",
-#         "timestamp": 0.0
-#     }
+# @router.get("/frontend", response_class=HTMLResponse)
+# def get_frontend():
+#     return Path("tests/frontend.html").read_text()
 
-#     Use websockets for pulling real-time sensor readings instead of this HTTP GET endpoint:
-
-#     ws://domain-name/ws/sensor
-#     """
-#     return latest_reading
-
-
-# @router.post("/sensor")
-# async def receive_data(data: SensorData):
-#     global latest_reading
-#     latest_reading = {
-#         "temperature": data.temperature,
-#         "humidity": data.humidity,
-#         "vibration": data.vibration,
-#         "timestamp": datetime.now(timezone.utc)
-#     }
-#     return latest_reading
+# @router.get("/device", response_class=HTMLResponse)
+# def get_device():
+#     return Path("tests/device.html").read_text()
 
 
 # @router.websocket("/ws/sensor")

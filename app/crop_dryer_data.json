@@ -1,0 +1,344 @@
+[
+  {
+    "Crop": "Maize (Corn)",
+    "Initial MC (Max %)": 35,
+    "Final MC (Max %)": 14,
+    "Critical Temperature Limit (∘C)": 60,
+    "Dryers": [
+      {
+        "Dryer Type": "Tray Dryer",
+        "Air Temp (Max ∘C)": 60,
+        "Air Velocity (Max m/s)": 4.0,
+        "Drying Time (Max hours)": 7.0
+      },
+      {
+        "Dryer Type": "Cabinet Dryer",
+        "Air Temp (Max ∘C)": 55,
+        "Air Velocity (Max m/s)": 5.0,
+        "Drying Time (Max hours)": 6.0
+      },
+      {
+        "Dryer Type": "Rotary Dryer",
+        "Air Temp (Max ∘C)": 50,
+        "Air Velocity (Max m/s)": 3.0,
+        "Drying Time (Max hours)": 3.0
+      },
+      {
+        "Dryer Type": "Fluidized-Bed Dryer",
+        "Air Temp (Max ∘C)": 45,
+        "Air Velocity (Max m/s)": 6.0,
+        "Drying Time (Max hours)": 2.5
+      },
+      {
+        "Dryer Type": "Solar Dryer",
+        "Air Temp (Max ∘C)": 55,
+        "Air Velocity (Max m/s)": 2.0,
+        "Drying Time (Max hours)": 10.0
+      }
+    ]
+  },
+  {
+    "Crop": "Cassava Chips",
+    "Initial MC (Max %)": 65,
+    "Final MC (Max %)": 12,
+    "Critical Temperature Limit (∘C)": 70,
+    "Dryers": [
+      {
+        "Dryer Type": "Tray Dryer",
+        "Air Temp (Max ∘C)": 65,
+        "Air Velocity (Max m/s)": 3.0,
+        "Drying Time (Max hours)": 8.0
+      },
+      {
+        "Dryer Type": "Rotary Dryer",
+        "Air Temp (Max ∘C)": 60,
+        "Air Velocity (Max m/s)": 4.0,
+        "Drying Time (Max hours)": 5.0
+      },
+      {
+        "Dryer Type": "Solar Dryer",
+        "Air Temp (Max ∘C)": 50,
+        "Air Velocity (Max m/s)": 2.0,
+        "Drying Time (Max hours)": 12.0
+      }
+    ]
+  },
+  {
+    "Crop": "Rice (Paddy)",
+    "Initial MC (Max %)": 28,
+    "Final MC (Max %)": 14,
+    "Critical Temperature Limit (∘C)": 55,
+    "Dryers": [
+      {
+        "Dryer Type": "Rotary Dryer",
+        "Air Temp (Max ∘C)": 55,
+        "Air Velocity (Max m/s)": 3.0,
+        "Drying Time (Max hours)": 4.0
+      },
+      {
+        "Dryer Type": "Fluidized-Bed Dryer",
+        "Air Temp (Max ∘C)": 50,
+        "Air Velocity (Max m/s)": 5.0,
+        "Drying Time (Max hours)": 2.5
+      }
+    ]
+  },
+  {
+    "Crop": "Groundnut (Peanut)",
+    "Initial MC (Max %)": 35,
+    "Final MC (Max %)": 8,
+    "Critical Temperature Limit (∘C)": 45,
+    "Dryers": [
+      {
+        "Dryer Type": "Tray Dryer",
+        "Air Temp (Max ∘C)": 40,
+        "Air Velocity (Max m/s)": 3.5,
+        "Drying Time (Max hours)": 4.0
+      },
+      {
+        "Dryer Type": "Solar Dryer",
+        "Air Temp (Max ∘C)": 35,
+        "Air Velocity (Max m/s)": 2.0,
+        "Drying Time (Max hours)": 7.0
+      }
+    ]
+  },
+  {
+    "Crop": "Sorghum",
+    "Initial MC (Max %)": 30,
+    "Final MC (Max %)": 12,
+    "Critical Temperature Limit (∘C)": 55,
+    "Dryers": [
+      {
+        "Dryer Type": "Rotary Dryer",
+        "Air Temp (Max ∘C)": 50,
+        "Air Velocity (Max m/s)": 3.0,
+        "Drying Time (Max hours)": 3.0
+      },
+      {
+        "Dryer Type": "Fluidized-Bed Dryer",
+        "Air Temp (Max ∘C)": 45,
+        "Air Velocity (Max m/s)": 5.0,
+        "Drying Time (Max hours)": 2.0
+      }
+    ]
+  },
+  {
+    "Crop": "Wheat",
+    "Initial MC (Max %)": 28,
+    "Final MC (Max %)": 13,
+    "Critical Temperature Limit (∘C)": 55,
+    "Dryers": [
+      {
+        "Dryer Type": "Tray Dryer",
+        "Air Temp (Max ∘C)": 50,
+        "Air Velocity (Max m/s)": 3.0,
+        "Drying Time (Max hours)": 4.5
+      },
+      {
+        "Dryer Type": "Fluidized-Bed Dryer",
+        "Air Temp (Max ∘C)": 45,
+        "Air Velocity (Max m/s)": 5.5,
+        "Drying Time (Max hours)": 3.0
+      }
+    ]
+  },
+  {
+    "Crop": "Soybean",
+    "Initial MC (Max %)": 30,
+    "Final MC (Max %)": 10,
+    "Critical Temperature Limit (∘C)": 45,
+    "Dryers": [
+      {
+        "Dryer Type": "Tray Dryer",
+        "Air Temp (Max ∘C)": 40,
+        "Air Velocity (Max m/s)": 3.0,
+        "Drying Time (Max hours)": 5.0
+      },
+      {
+        "Dryer Type": "Solar Dryer",
+        "Air Temp (Max ∘C)": 35,
+        "Air Velocity (Max m/s)": 2.0,
+        "Drying Time (Max hours)": 8.0
+      }
+    ]
+  },
+  {
+    "Crop": "Millet",
+    "Initial MC (Max %)": 32,
+    "Final MC (Max %)": 12,
+    "Critical Temperature Limit (∘C)": 50,
+    "Dryers": [
+      {
+        "Dryer Type": "Tray Dryer",
+        "Air Temp (Max ∘C)": 45,
+        "Air Velocity (Max m/s)": 3.5,
+        "Drying Time (Max hours)": 4.0
+      },
+      {
+        "Dryer Type": "Rotary Dryer",
+        "Air Temp (Max ∘C)": 50,
+        "Air Velocity (Max m/s)": 3.0,
+        "Drying Time (Max hours)": 3.5
+      }
+    ]
+  },
+  {
+    "Crop": "Cowpea (Beans)",
+    "Initial MC (Max %)": 28,
+    "Final MC (Max %)": 10,
+    "Critical Temperature Limit (∘C)": 45,
+    "Dryers": [
+      {
+        "Dryer Type": "Tray Dryer",
+        "Air Temp (Max ∘C)": 40,
+        "Air Velocity (Max m/s)": 3.0,
+        "Drying Time (Max hours)": 5.0
+      },
+      {
+        "Dryer Type": "Solar Dryer",
+        "Air Temp (Max ∘C)": 35,
+        "Air Velocity (Max m/s)": 2.0,
+        "Drying Time (Max hours)": 9.0
+      }
+    ]
+  },
+  {
+    "Crop": "Yam Chips",
+    "Initial MC (Max %)": 70,
+    "Final MC (Max %)": 12,
+    "Critical Temperature Limit (∘C)": 70,
+    "Dryers": [
+      {
+        "Dryer Type": "Tray Dryer",
+        "Air Temp (Max ∘C)": 65,
+        "Air Velocity (Max m/s)": 3.0,
+        "Drying Time (Max hours)": 8.0
+      },
+      {
+        "Dryer Type": "Rotary Dryer",
+        "Air Temp (Max ∘C)": 60,
+        "Air Velocity (Max m/s)": 4.0,
+        "Drying Time (Max hours)": 6.0
+      },
+      {
+        "Dryer Type": "Solar Dryer",
+        "Air Temp (Max ∘C)": 50,
+        "Air Velocity (Max m/s)": 2.0,
+        "Drying Time (Max hours)": 12.0
+      }
+    ]
+  },
+  {
+    "Crop": "Cocoa Beans",
+    "Initial MC (Max %)": 60,
+    "Final MC (Max %)": 7,
+    "Critical Temperature Limit (∘C)": 60,
+    "Dryers": [
+      {
+        "Dryer Type": "Cabinet Dryer",
+        "Air Temp (Max ∘C)": 55,
+        "Air Velocity (Max m/s)": 4.0,
+        "Drying Time (Max hours)": 7.0
+      },
+      {
+        "Dryer Type": "Solar Dryer",
+        "Air Temp (Max ∘C)": 45,
+        "Air Velocity (Max m/s)": 2.0,
+        "Drying Time (Max hours)": 10.0
+      }
+    ]
+  },
+  {
+    "Crop": "Plantain Slices",
+    "Initial MC (Max %)": 68,
+    "Final MC (Max %)": 12,
+    "Critical Temperature Limit (∘C)": 65,
+    "Dryers": [
+      {
+        "Dryer Type": "Tray Dryer",
+        "Air Temp (Max ∘C)": 60,
+        "Air Velocity (Max m/s)": 4.0,
+        "Drying Time (Max hours)": 6.0
+      },
+      {
+        "Dryer Type": "Cabinet Dryer",
+        "Air Temp (Max ∘C)": 55,
+        "Air Velocity (Max m/s)": 3.5,
+        "Drying Time (Max hours)": 7.0
+      }
+    ]
+  },
+  {
+    "Crop": "Tomato",
+    "Initial MC (Max %)": 95,
+    "Final MC (Max %)": 12,
+    "Critical Temperature Limit (∘C)": 65,
+    "Dryers": [
+      {
+        "Dryer Type": "Oven Dryer",
+        "Air Temp (Max ∘C)": 65,
+        "Air Velocity (Max m/s)": 2,
+        "Drying Time (Max hours)": 10.0
+      },
+      {
+        "Dryer Type": "Microwave",
+        "Air Temp (Max ∘C)": 60,
+        "Air Velocity (Max m/s)": 2,
+        "Drying Time (Max hours)": 0.5
+      },
+      {
+        "Dryer Type": "Tray Dryer",
+        "Air Temp (Max ∘C)": 60,
+        "Air Velocity (Max m/s)": 3.5,
+        "Drying Time (Max hours)": 9.0
+      },
+      {
+        "Dryer Type": "Solar Dryer",
+        "Air Temp (Max ∘C)": 50,
+        "Air Velocity (Max m/s)": 2.0,
+        "Drying Time (Max hours)": 12.0
+      }
+    ]
+  },
+  {
+    "Crop": "Mango Slices",
+    "Initial MC (Max %)": 85,
+    "Final MC (Max %)": 12,
+    "Critical Temperature Limit (∘C)": 65,
+    "Dryers": [
+      {
+        "Dryer Type": "Tray Dryer",
+        "Air Temp (Max ∘C)": 60,
+        "Air Velocity (Max m/s)": 4.0,
+        "Drying Time (Max hours)": 8.0
+      },
+      {
+        "Dryer Type": "Solar Dryer",
+        "Air Temp (Max ∘C)": 50,
+        "Air Velocity (Max m/s)": 2.0,
+        "Drying Time (Max hours)": 11.0
+      }
+    ]
+  },
+  {
+    "Crop": "Chili Pepper",
+    "Initial MC (Max %)": 80,
+    "Final MC (Max %)": 10,
+    "Critical Temperature Limit (∘C)": 65,
+    "Dryers": [
+      {
+        "Dryer Type": "Tray Dryer",
+        "Air Temp (Max ∘C)": 60,
+        "Air Velocity (Max m/s)": 3.5,
+        "Drying Time (Max hours)": 9.0
+      },
+      {
+        "Dryer Type": "Solar Dryer",
+        "Air Temp (Max ∘C)": 50,
+        "Air Velocity (Max m/s)": 2.0,
+        "Drying Time (Max hours)": 13.0
+      }
+    ]
+  }
+]

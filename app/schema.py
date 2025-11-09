@@ -1,3 +1,4 @@
+from enum import Enum
 from datetime import datetime
 from pydantic import BaseModel
 
@@ -10,10 +11,17 @@ class OptimizationRequest(BaseModel):
     timestamp: datetime
 
 
+class RecommendationLevel(str, Enum):
+    DANGER = "danger"
+    WARNING = "warning"
+    OPTIMAL = "optimal"
+
+
 class OptimizationResponse(BaseModel):
-    recommendations: list[str]
+    recommendations: list[tuple[RecommendationLevel, str]]
     estimated_moisture_content: str
-    optimal_drying_time_range: str
+    drying_time_elapsed: str
+    drying_time_hours: str
 
 
 class SensorData(BaseModel):
