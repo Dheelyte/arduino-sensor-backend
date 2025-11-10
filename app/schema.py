@@ -6,8 +6,8 @@ from pydantic import BaseModel
 class OptimizationRequest(BaseModel):
     dryer: str
     crop: str
-    initial_moisture_content: str
-    final_moisture_content: str
+    initial_moisture_content: int
+    final_moisture_content: int
     timestamp: datetime
 
 
