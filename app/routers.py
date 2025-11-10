@@ -9,7 +9,7 @@ from fastapi.responses import HTMLResponse
 from pathlib import Path
 
 
-router = APIRouter(tags=["Optimization"])
+router = APIRouter(prefix="/api", tags=["Optimization"])
 
 frontend_connections = set()
 
